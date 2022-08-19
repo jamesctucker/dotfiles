@@ -61,6 +61,29 @@ do
     fi
 done
 
+# check if node is installed, if not install with nvm
+echo "---------------------------------------------------------"
+echo "$(tput setaf 2)Artemis: Checking if node is installed.$(tput sgr 0)"
+echo "---------------------------------------------------------"
+if [ -f "$(brew --prefix)/bin/node" ]
+then
+    echo "---------------------------------------------------------"
+    echo "$(tput setaf 2)Artemis: Node is installed.$(tput sgr 0)"
+    echo "---------------------------------------------------------"
+else
+    echo "---------------------------------------------------------"
+    echo "$(tput setaf 3)Artemis: Node is not installed. Installing node.$(tput sgr 0)"
+    echo "---------------------------------------------------------"
+    nvm install node
+    # if there is an installation error, exit the script
+    if [ $? -ne 0 ]; then
+        echo "---------------------------------------------------------"
+        echo "$(tput setaf 1)Artemis: There was an error installing node.$(tput sgr 0)"
+        echo "---------------------------------------------------------"
+        exit 1
+    fi
+fi
+
 # check if rvm is installed, and install it if it's not
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)Artemis: Checking for RVM installation.$(tput sgr 0)"
