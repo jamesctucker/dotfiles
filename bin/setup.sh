@@ -50,8 +50,8 @@ echo "---------------------------------------------------------"
 packages=(
     "git"
     "nvm"
-    # "tmux"
     "yarn"
+    "rcm"
 )
 
 for i in "${packages[@]}"
@@ -165,3 +165,10 @@ echo "---------------------------------------------------------"
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+# copy over dotfiles
+echo "---------------------------------------------------------"
+echo "$(tput setaf 2)Artemis: Copying over dotfiles.$(tput sgr 0)"
+echo "---------------------------------------------------------"
+env RCRC=$HOME/dotfiles/rcrc rcup
+rcup
