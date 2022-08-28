@@ -1,3 +1,3 @@
 # Dotfiles
 
-Things will go here.
+Install commmonly used programs, apps, and settings.
