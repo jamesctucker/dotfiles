@@ -1,0 +1,10 @@
+# Copy this to install-config and fill in your values
+# install-config is gitignored and never committed
+GITHUB_USERNAME="yourname"
+GIT_NAME="Your Name"
+GIT_EMAIL="you@example.com"
+EOF
+
+git add README.md install-config.example
+git commit -m "Add README and install-config example"
+git push

@@ -6,10 +6,10 @@ BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d_%H%M%S)"
 
 typeset -A links
 links=(
-  .config/tmux/tmux.conf         "$HOME/.tmux.conf"
+  .config/tmux/.tmux.conf         "$HOME/.tmux.conf"
   .config/zsh/.zshrc             "$HOME/.zshrc"
-  .config/git/gitconfig          "$HOME/.gitconfig"
-  .config/git/gitignore_global   "$HOME/.gitignore_global"
+  .config/git/.gitconfig          "$HOME/.gitconfig"
+  .config/git/.gitignore_global   "$HOME/.gitignore_global"
   .config/nvim                   "$HOME/.config/nvim"
 )
 
