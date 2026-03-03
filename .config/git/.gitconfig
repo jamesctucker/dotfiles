@@ -1,0 +1,30 @@
+[user]
+	email = jamest@cleancounts.org
+	name = James Tucker
+
+[core]
+  excludesfile = ~/.gitignore_global
+# editor = nvim
+
+[pull]
+  rebase = true
+
+[push]
+  default = current
+
+[init]
+  defaultBranch = main
+
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  lg = log --oneline --graph --decorate --all
+  undo = reset HEAD~1 --mixed
+  wip = commit -am "wip"
+
+[include]
+  # Machine-local config: git identity, signing key, work email
+  # Create this file manually on each machine - it is gitignored
+  path = ~/.config/git/config.local
+

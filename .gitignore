@@ -1,10 +1,14 @@
+# ===== Personal values =====
+install-config
+
 # ===== Secrets & credentials =====
 **/*.env
 **/*.env.*
 **/secrets
 **/credentials
-.config/git/credentials     # git credential store - never commit
-**/*_rsa                    # SSH private keys
+.config/git/credentials
+.config/git/config.local
+**/*_rsa
 **/*_ed25519
 **/*.pem
 **/*.key
@@ -16,8 +20,7 @@
 .Trashes
 
 # ===== Neovim runtime artifacts =====
-.config/nvim/plugin/         # packer/lazy compiled state - regenerates automatically
-.config/nvim/lazy-lock.json  # optional: lock file for LazyVim (some prefer to commit this)
+.config/nvim/plugin/
 .config/nvim/.netrwhist
 .config/nvim/swap/
 .config/nvim/undo/
@@ -28,12 +31,9 @@
 .config/zsh/.zsh_sessions/
 
 # ===== tmux runtime =====
-.config/tmux/resurrect/      # tmux-resurrect session saves (machine-specific)
+.config/tmux/resurrect/
 
 # ===== Misc editor noise =====
 *.swp
 *.swo
 *~
-
-[core]
-  excludesfile = ~/.gitignore_global
